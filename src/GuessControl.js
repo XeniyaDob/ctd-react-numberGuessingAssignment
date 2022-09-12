@@ -3,13 +3,15 @@ import Button from "./Button";
 
 const GuessControl = ({ onGuess }) => {
   const [currentGuess, setCurrentGuess] = React.useState("");
-  const handleInputChange = (event) => {
+
+  function handleInputChange(event) {
     setCurrentGuess(event.target.value);
-  };
-  const onSubmitGuess = () => {
+  }
+
+  function onSubmitGuess() {
     onGuess(Number(currentGuess));
     setCurrentGuess("");
-  };
+  }
 
   return (
     <>
